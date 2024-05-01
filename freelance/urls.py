@@ -6,7 +6,4 @@ urlpatterns = [
     path('about/', views.about, name='about'),  # http://127.0.0.1:8000/about/
     path('contact/', views.contact, name='contact'),
     path('login/', views.login, name='login'),
-
-
 ]
-
