@@ -22,7 +22,7 @@ from freelance.views import page_not_found
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('freelance.urls')),  # http://127.0.0.1:8000/
-    path('users/', include('users.urls')),  # http://127.0.0.1:8000/users/
+    path('users/', include('users.urls', namespace='users')),  # http://127.0.0.1:8000/users/
 
     # path("__debug__/", include("debug_toolbar.urls")),
     # path('users/', include('users.urls', namespace='users')),

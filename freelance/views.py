@@ -1,10 +1,11 @@
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 menu = [{'title': "О сайте", 'url_name': 'about'},
         {'title': "Обратная связь", 'url_name': 'contact'},
-        {'title': "Войти", 'url_name': 'login'}
-]
+        {'title': "Войти", 'url_name': 'users:login'}
+        ]
 
 
 def index(request):
@@ -21,10 +22,6 @@ def about(request):
 
 def contact(request):
     return HttpResponse("Контакты")
-
-
-def login(request):
-    return HttpResponse("Авторизация")
 
 
 def page_not_found(request, exception):
